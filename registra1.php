@@ -1,11 +1,13 @@
 <?php
-$connection_obj = mysqli_connect("{MYSQL_HOSTNAME}", "{MYSQL_USERNAME}", "{MYSQL_PASSWORD}", "{MYSQL_DATABASE}");
+//$connection_obj = mysqli_connect("{MYSQL_HOSTNAME}", "{MYSQL_USERNAME}", "{MYSQL_PASSWORD}", "{MYSQL_DATABASE}");
  
-if (!$connection_obj) {
+include("auth.php");
+
+/*if (!$connection_obj) {
     echo "Error No: " . mysqli_connect_errno();
     echo "Error Description: " . mysqli_connect_error();
     exit;
-}
+}*/
  
 // prepare the select query
 $query = "SELECT * FROM employee";
