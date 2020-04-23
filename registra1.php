@@ -1,13 +1,13 @@
 <?php
 //$connection_obj = mysqli_connect("{MYSQL_HOSTNAME}", "{MYSQL_USERNAME}", "{MYSQL_PASSWORD}", "{MYSQL_DATABASE}");
- 
-include("auth.php");
 
-/*if (!$connection_obj) {
+$connection_obj = mysqli_connect("ocvwlym0zv3tcn68.cbetxkdyhwsb.us-east-1.rds.amazonaws.com","hba90vutj8x99kac","np0qawe93yjdcgld","b83b60bwal8v2w60"); 
+
+if (!$connection_obj) {
     echo "Error No: " . mysqli_connect_errno();
     echo "Error Description: " . mysqli_connect_error();
     exit;
-}*/
+}
  
 // prepare the select query
 $query = "SELECT * FROM employee";
