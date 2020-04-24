@@ -28,7 +28,7 @@ and clave='".md5($clave)."'";
          }else{
 	echo "<div class='form'>
 <h3>Nombre/Contraseña son incorrectas.</h3>
-<br/>Click here to <a href='login.php'>Login</a></div>";
+<br/>Ir a <a href='login.php'>Login</a></div>";
 	}
     }else{
 ?>
