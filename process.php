@@ -1,7 +1,6 @@
 <?php
 require ('MySqlDrive.php');
 $db_con = new mysqldrive();
-
 //session_start();
 $descripcion = "";
 $precio = "";

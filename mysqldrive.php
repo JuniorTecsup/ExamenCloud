@@ -1,5 +1,4 @@
 <?php
-
     class MySqlDrive
     {
         private $host = 'ocvwlym0zv3tcn68.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';

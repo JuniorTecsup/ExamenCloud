@@ -17,7 +17,7 @@ include("auth.php");
 
 <div class="container">        	
 <div style="margin-left: 10px;">
-<h1 style="text-align: center;margin-top: 20px;">Bienvenido <?php echo $_SESSION['username']; ?>!</h1>
+<h1 style="text-align: center;margin-top: 20px;">Bienvenido <?php echo $_SESSION['nombre']; ?>!</h1>
 <div class="shadow-none p-3 mb-5 bg-light rounded" style="margin-top: 25px;max-height:45px">
         <ul>
           <a href="menu.php">Menú</a><span> / </span>
