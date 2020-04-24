@@ -1,7 +1,7 @@
 <?php
 require ('mysqldrive.php');
 $db_con = new MySqlDrive();
-session_start();
+//session_start();
 $nombre = "";
 $email = "";
 $clave = "";
