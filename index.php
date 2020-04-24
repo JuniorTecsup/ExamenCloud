@@ -1,5 +1,5 @@
 <?php
-include("auth.php");//estas logeado?
+//include("auth.php");//estas logeado?
 ?>
 
 <html style="margin-top: 30px;">
