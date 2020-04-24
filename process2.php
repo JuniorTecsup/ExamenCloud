@@ -1,6 +1,6 @@
 <?php
-require ('MySqlDrive.php');
-$db_con = new mysqldrive();
+require ('mysqldrive.php');
+$db_con = new MySqlDrive();
 session_start();
 $nombre = "";
 $email = "";
