@@ -1,7 +1,7 @@
 <?php
-require ('MySqlDrive.php');
-$db_con = new mysqldrive();
-//session_start();
+require ('mysqldrive.php');
+$db_con = new MySqlDrive();
+session_start();
 $descripcion = "";
 $precio = "";
 $stock = "";

@@ -8,7 +8,15 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
     <body>
-        
+        <?php
+            require('process.php');//conectar
+
+            $db_con = new MySqlDrive();
+            $query = "select * from articulos";
+            // $result = $db_con->read($query);
+            $result = mysqli_query($db_con->db_connect(), $query);
+            // var_dump($result);
+        ?>
 
         <?php if(isset($_SESSION['message'])): ?>
 
