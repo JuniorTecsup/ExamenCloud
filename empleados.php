@@ -11,10 +11,10 @@ include("auth.php");//estas logeado?
     </head>
     <body>
         <?php
-            require('process.php');//conectar
+            require('process2.php');//conectar
 
             $db_con = new MySqlDrive();
-            $query = "SELECT * FROM articulos";
+            $query = "SELECT * FROM empleados";
             // $result = $db_con->read($query);
             $result = mysqli_query($db_con->db_connect(), $query);
             // var_dump($result);
@@ -25,12 +25,12 @@ include("auth.php");//estas logeado?
 
         <?php endif ?>
 <div class="container">
-        <h2 style="text-align:center;margin-bottom: 10px;">Gestionar Articulos</h2>
+        <h2 style="text-align:center;margin-bottom: 10px;">Gestionar Personal</h2>
 
 <div class="shadow-none p-3 mb-5 bg-light rounded" style="margin-top: 20px;max-height:45px">
         <ul>
           <a href="menu.php">Menú</a><span> / </span>
-          <a href="index.php">Gestionar Inventario</a><span> / </span>
+          <a href="empleados.php">Gestionar Personal</a><span> / </span>
         </ul>
 </div>
 
@@ -39,9 +39,8 @@ include("auth.php");//estas logeado?
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Descripcion</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
                         <th>Accion 1</th>
                         <th>Accion 2</th>
                     </tr>
@@ -49,14 +48,13 @@ include("auth.php");//estas logeado?
                 <tbody>
                     <?php while($row = $result->fetch_assoc()){ ?>
                     <tr>
-                        <td><?php echo $row['descripcion']; ?></td>
-                        <td><?php echo $row['precio']; ?></td>
-                        <td><?php echo $row['stock']; ?></td>
+                        <td><?php echo $row['nombre']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
                         <td>           
-                    <a class="btn btn-primary" href="index.php?edit=<?php echo $row['id']?>" role="button">Editar</a>
+                    <a class="btn btn-primary" href="empleados.php?edit=<?php echo $row['id']?>" role="button">Editar</a>
                         </td>
                         <td>
-                    <a class="btn btn-danger" href="process.php?delete=<?php echo $row['id']?>" role="button">Eliminar</a>
+                    <a class="btn btn-danger" href="process2.php?delete=<?php echo $row['id']?>" role="button">Eliminar</a>
                         </td>
                     </tr>
                     <?php } ?>
@@ -65,13 +63,13 @@ include("auth.php");//estas logeado?
 
         </div>
         <br>
-        <form action="process.php" method="POST">
-            <label for="">Descripcion</label>
-            <input type="text" value="<?php echo $descripcion;?>" name="descripcion">
-            <label for="">Precio</label>
-            <input type="number" value="<?php echo $precio;?>" name="precio">
-            <label for="">Stock</label>
-            <input type="number" value="<?php echo $stock;?>" name="stock">
+        <form action="process2.php" method="POST">
+            <label for="">Nombre</label>
+            <input type="text" value="<?php echo $nombre;?>" name="nombre">
+            <label for="">Email</label>
+            <input type="email" value="<?php echo $email;?>" name="email">
+            <label for="">Clave</label>
+            <input type="password" value="" name="clave">
             <input type="hidden" value="<?php echo $id;?>" name="id">
             <?php if($update == true): ; ?>
                 <button type="submit" name="update">Actualizar</button>
